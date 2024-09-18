@@ -11,7 +11,7 @@ namespace HelloWorldTest
 
         //Harjoitus - PeruslaskutNumeromuuttujilla
         [Fact]
-        [Trait("TestGroup", "Keskiarvo ")]
+        [Trait("TestGroup", "Keskiarvo")]
         public void Keskiarvo()
         {
             // Arrange
