@@ -40,7 +40,21 @@ namespace HelloWorldTest
                 // Define a regex pattern to match the structure, ignoring specific values
 
                 // Assert: Check if the result matches the expected structure
-                Assert.True(LineContainsIgnoreSpaces(resultLines[0], "Lukujen: 5 10 ja 19 summa on: 34 ja keskiarvo on: 11,333333333333334"), "Line does not contain expected text: " + resultLines[0]);
+                int luku1 = 5;
+                int luku2 = 10;
+                int luku3 = 19;
+
+                float summa = luku1 + luku2 + luku3;
+
+                float keskiarvo = summa / 3;
+
+
+                Assert.True(LineContainsIgnoreSpaces(resultLines[0], "Lukujen: " + luku1 + " " + luku2 + " ja " + luku3 + " summa on: "
+                + summa + " ja keskiarvo on:  " + keskiarvo + "   "), "Line does not contain expected text: " +
+                "Lukujen: " + luku1 + " " + luku2 + " ja " + luku3 + " summa on: "
+                + summa + " ja keskiarvo on:  " + keskiarvo + "   "
+                +"Output"+
+                resultLines[0]);
             }
             catch (OperationCanceledException)
             {
